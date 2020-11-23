@@ -7,5 +7,6 @@ class HomeController
 
   public function index()
   {
+    dd("index");
   }
 }
