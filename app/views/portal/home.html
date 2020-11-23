@@ -1,0 +1,15 @@
+{% extends "portal/layout.html" %}
+
+{% block portal %}
+
+<h1>Home</h1>
+
+<ul>
+{% for user in users %}
+
+  <li>{{ user.nome }}</li>
+
+{% endfor %}
+</ul>
+
+{% endblock %}
