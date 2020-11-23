@@ -1,8 +1,10 @@
 <?php
 
-namespace app\controller\portal;
+namespace app\controllers\portal;
 
-class ProdutoController
+use app\controller\ContainerController;
+
+class CursoController extends ContainerController
 {
 
   public function index()

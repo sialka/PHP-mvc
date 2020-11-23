@@ -6,6 +6,11 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit0b56e72230825cc0b9810c83886dd99a
 {
+    public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'c' => 
         array (
@@ -14,6 +19,16 @@ class ComposerStaticInit0b56e72230825cc0b9810c83886dd99a
         'a' => 
         array (
             'app\\' => 4,
+        ),
+        'T' => 
+        array (
+            'Twig\\Extensions\\' => 16,
+            'Twig\\' => 5,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
     );
 
@@ -26,6 +41,36 @@ class ComposerStaticInit0b56e72230825cc0b9810c83886dd99a
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Twig\\Extensions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/extensions/src',
+        ),
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_Extensions_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/extensions/lib',
+            ),
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -33,6 +78,7 @@ class ComposerStaticInit0b56e72230825cc0b9810c83886dd99a
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit0b56e72230825cc0b9810c83886dd99a::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit0b56e72230825cc0b9810c83886dd99a::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0b56e72230825cc0b9810c83886dd99a::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

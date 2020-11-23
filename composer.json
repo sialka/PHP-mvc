@@ -1,11 +1,19 @@
 {
-  "autoload": {
-    "psr-4": {
-      "app\\":"app",
-      "core\\":"core"
+    "name": "sidnei/mvc",
+    "authors": [
+        {
+            "name": "sidnei monteiro",
+            "email": "sialkas@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "app\\":"app",
+          "core\\":"core"
+        }
+      },
+    "require": {
+        "twig/twig": "^2.0",
+        "twig/extensions": "^1.5"
     }
-  },
-  "require": {
-    "twig/extensions": "^1.5"
-  }
 }
