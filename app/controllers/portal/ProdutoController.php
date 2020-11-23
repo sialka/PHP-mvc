@@ -2,7 +2,7 @@
 
 namespace app\controllers\portal;
 
-use app\controller\ContainerController;
+use app\controllers\ContainerController;
 
 class ProdutoController extends ContainerController
 {

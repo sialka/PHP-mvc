@@ -12,8 +12,8 @@ class Controller
   private $namespace;
   private $controller;
   private $folders = [
-    'app\controller\portal',
-    'app\controller\admin'
+    'app\controllers\portal',
+    'app\controllers\admin'
   ];
 
   public function __construct()

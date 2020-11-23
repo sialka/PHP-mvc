@@ -2,7 +2,7 @@
 
 namespace app\controllers\portal;
 
-use app\controller\ContainerController;
+use app\controllers\ContainerController;
 
 class CursoController extends ContainerController
 {
@@ -14,6 +14,8 @@ class CursoController extends ContainerController
 
   public function show($request)
   {
-    dd($request->next);
+    $this->view([
+      "curso" => "Estudo de PHP MVC"
+    ], "portal.cursos");
   }
 }
