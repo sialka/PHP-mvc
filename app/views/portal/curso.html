@@ -1,0 +1,17 @@
+{% extends "portal/layout.html" %}
+
+{% block portal %}
+
+<h1>Cursos</h1>
+
+{{ curso | truncate(100) }}
+
+<br>
+
+{{ user() }}
+
+<br>
+
+{{ teste() }}
+
+{% endblock %}

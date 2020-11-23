@@ -8,19 +8,20 @@ trait View
 {
   private function twig()
   {
-
-    // dd("aqui");
     $twig = new Twig;
+    $loadTwig = $twig->loadTwig();
 
-    return $twig->loadTwig();
+    $twig->loadExtensions();
+    $twig->loadFunctions();
+
+    return $loadTwig;
   }
 
   public function view($data, $view)
   {
 
-    $template = $this->twig()->load(str_replace(".", "/", $view . "html"));
+    $template = $this->twig()->load(str_replace(".", "/", $view) . ".html");
 
-    // dd("aqui");
 
     return $template->display($data);
   }

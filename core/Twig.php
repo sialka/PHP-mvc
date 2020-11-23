@@ -2,6 +2,8 @@
 
 namespace core;
 
+use Closure;
+
 class Twig
 {
 
@@ -22,5 +24,24 @@ class Twig
   private function loadViews()
   {
     return new \Twig\Loader\FilesystemLoader("../app/views");
+  }
+
+  public function loadExtensions()
+  {
+    return $this->twig->addExtension(new \Twig\Extensions\TextExtension());
+  }
+
+  private function functionsToView($name, \Closure $callback)
+  {
+    return new \Twig\TwigFunction($name, $callback);
+  }
+
+  public function loadFunctions()
+  {
+    require "../app/functions/twig.php";
+
+    foreach ($this->functions as $key => $value) {
+      $this->twig->addFunction($this->functions[$key]);
+    }
   }
 }

@@ -15,7 +15,8 @@ class CursoController extends ContainerController
   public function show($request)
   {
     $this->view([
-      "curso" => "Estudo de PHP MVC"
-    ], "portal.cursos");
+      "title" => "Estudo de PHP MVC",
+      "curso" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut magni quis odio nobis expedita dicta distinctio velit, tempora, similique consectetur quaerat asperiores quia adipisci soluta? Dolorum laboriosam dolor obcaecati quia?"
+    ], "portal.curso");
   }
 }
